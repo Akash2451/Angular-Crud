@@ -1,0 +1,41 @@
+<div class="bg">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <form [formGroup]="loginform" (ngSubmit)="login()">
+          <div class="mb-3 mt-3">
+            <label for="uname" class="form-label">Email:</label>
+            <input [ngClass]="{
+                'is-invalid': submitted && loginform.controls['email'].errors
+              }" type="text" class="form-control one" id="uname" placeholder="Enter Email" formControlName="email"
+              name="uname" autocomplete="off" />
+            <i class="fa-solid fa-envelope eym"></i>
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input [ngClass]="{
+                'is-invalid': submitted && loginform.controls['password'].errors
+              }" type="password" class="form-control one" id="pwd" placeholder="Enter password"
+              formControlName="password" name="pswd" />
+            <i class="fa-solid fa-key eye"></i>
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors">Password is required</div>
+            </div>
+          </div>
+          <button style="width: 100%; color: aliceblue; text-align: center" [disabled]="!loginform.valid" type="submit"
+            (click)="onSubmit()" class="btn btn-info">
+            <b>Login</b>
+          </button>
+        </form>
+        <br />
+        <b style="color: white; text-align: center; text-decoration: none">
+          <a class="text" style="color: white" routerLink="/sign">
+            <span style="padding-right: 7px">New user? </span> Click to signup!!</a></b>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast></p-toast>

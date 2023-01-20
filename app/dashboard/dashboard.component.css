@@ -1,0 +1,58 @@
+.primeTable {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.centr {
+  text-align: center !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+
+
+@media (min-width: 1200px) {
+  .modal-dialog {
+    max-width: 22% !important;
+  }
+}
+
+.form-group {
+  margin-bottom: 0px !important;
+}
+
+.modal-body {
+  padding-top: 0% !important;
+  padding-bottom: 0% !important;
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar-toggler {
+    background: aliceblue;
+    color: black;
+
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    background: aliceblue;
+    color: black;
+
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar-toggler {
+    background: aliceblue;
+    color: black;
+
+  }
+}

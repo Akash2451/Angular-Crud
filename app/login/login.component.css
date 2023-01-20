@@ -1,0 +1,61 @@
+.bg {
+    background-image: url('/assets/Images/unsplash.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.col-sm-4 {
+    margin: auto;
+    margin-top: 199px;
+
+}
+
+.card {
+    padding: 40px;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 23px rgb(7 145 184 / 84%), 0 1px 3px rgb(0 0 0 / 20%);
+    padding-bottom: 11px;
+}
+
+label {
+    color: #fff;
+}
+
+.sig {
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+    padding: 11px
+}
+
+.one {
+    background: transparent;
+    color: white;
+    box-shadow: 0 0 23px rgb(113 183 17 / 62%), 0 1px 3px rgb(0 0 0 / 20%);}
+
+    
+    .text{
+        text-shadow: 2px 2px 8px #ff0000;
+
+    }
+
+    .form-label{
+        text-shadow: 2px 2px 8px #ff0000;
+    }
+
+    .eye{
+        color: aliceblue;
+        position: absolute;
+        bottom: 38%;
+        left: 87%;
+    }
+    .eym{
+        color: aliceblue;
+        position: absolute;
+        bottom: 64.5%;
+        left: 87%;
+    }

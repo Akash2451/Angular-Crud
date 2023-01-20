@@ -1,0 +1,17 @@
+<form [formGroup]="addform" (ngSubmit)="addEvent()">
+  <div class="mb-3">
+    <label class="form-label"> Event Title</label>
+    <input type="text" class="form-control" formControlName="title" autocomplete="off" style="color: black;">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Start Date</label>
+    <input type="datetime-local" class="form-control" formControlName="start" style="color: black;">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">End Date</label>
+    <input type="datetime-local" class="form-control" formControlName="end" style="color: black;">
+  </div>
+  <button type="submit" routerLink="home/calendar" class="btn btn-outline-info">Add Event</button>
+</form>
+
+<p-toast position="top-right"></p-toast>

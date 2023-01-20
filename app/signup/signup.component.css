@@ -1,0 +1,70 @@
+.col-sm-4 {
+  margin: auto;
+  margin-top: 140px;
+}
+
+.card {
+  padding: 18px;
+  border: none;
+  box-shadow: 0 0 23px rgb(7 145 184 / 84%), 0 1px 3px rgba(210, 18, 18, 0.2);
+  background: transparent;
+  padding-bottom: 12px;
+}
+
+label {
+  color: #fff;
+}
+
+.sig {
+  text-decoration: none;
+  color: antiquewhite;
+  margin-left: 23px;
+  text-shadow: 2px 2px 8px #ff0000;
+
+}
+
+.bg {
+  background-image: url("/assets/Images/unsplash.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.in1 {
+  background: transparent;
+  color: white;
+}
+
+.labl {
+  color: white;
+  text-shadow: 2px 2px 8px #ff0000;
+
+}
+
+.fsn{
+  color: aliceblue;
+        position: absolute;
+        bottom: 82.5%;
+        left: 89%;
+}
+.mobl{
+  color: aliceblue;
+  position: absolute;
+  bottom: 62.5%;
+  left: 89%;
+}
+
+.emailicon{
+  color: aliceblue;
+  position: absolute;
+  bottom: 42.5%;
+  left: 89%;
+}
+.passicon{
+  color: aliceblue;
+  position: absolute;
+  bottom: 23.5%;
+  left: 89%;
+}

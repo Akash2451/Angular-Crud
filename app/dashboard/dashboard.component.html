@@ -1,0 +1,214 @@
+<section class="main-header " style="z-index: auto;">
+  <nav class="navbar navbar-expand-lg bg-black text-white">
+    <div class="container-fluid">
+      <a class="navbar-brand"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Action</a></li>
+              <li><a class="dropdown-item">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item">Something else here</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+            class="fa-solid fa-user-plus"></i></button>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-danger" routerLink="/home" type="submit"><i class="fa-solid fa-power-off"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<section class="main-header " style="z-index: auto;">
+
+  <p-table class="primeTable" [value]="empList" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="center">Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email ID</th>
+        <th>Mobile No</th>
+        <th>Password</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <td class="centr">{{row.id}}</td>
+        <td>{{ row.firstName }}</td>
+        <td>{{ row.lastName }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.mobile }}</td>
+        <td>{{ row.password }}</td>
+        <td>{{ row.salary }}</td>
+        <td>
+          <div class="btn-group btn-group-sm">
+            <a class="btn btn-info" ><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal"
+                data-bs-target="#editEmploy" (click)="editEmployee(row)"></i></a>
+            <a class="btn btn-danger"><i class="fa-solid fa-trash"  (click)="deleteEmployee(row)"></i></a>
+          </div>
+      </tr>
+    </ng-template>
+  </p-table>
+
+
+  <!-- Add Employee -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Employee Details
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form [formGroup]="formValue" (ngSubmit)="addEmployee()">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" formControlName="firstName" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
+              <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" formControlName="lastName" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+              <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" formControlName="email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+              <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Mobile</label>
+              <input type="text" formControlName="mobile" class="form-control" maxlength="10"
+                [ngClass]="{ 'is-invalid': submitted && f['mobile'].errors }" />
+              <div *ngIf="submitted && f['mobile'].errors" class="invalid-feedback">
+                <div *ngIf="f['mobile'].errors['required']">Mobile No is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Salary</label>
+              <input type="text" formControlName="salary" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['salary'].errors }" />
+              <div *ngIf="submitted && f['salary'].errors" class="invalid-feedback">
+                <div *ngIf="f['salary'].errors['required']"> Salary is required</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!formValue.valid" type="submit">
+                Add
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Employee Details -->
+
+  <div class="modal fade" id="editEmploy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Edit Employee Details
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label">First Name</label>
+              <input type="text" class="form-control" formControlName="firstName" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label">Last Name</label>
+              <input type="text" class="form-control" formControlName="lastName" id="exampleInputPassword" />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label">Email ID</label>
+              <input type="email" class="form-control" formControlName="email" id="exampleInputPasswod1" />
+            </div>
+            <div class="form-group">
+              <label for="m_no" class="form-label">Mobile No</label>
+              <input type="text" maxlength="10" class="form-control" formControlName="mobile" id="m_no" />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" id="exampleInputPasword1" />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1" class="form-label">
+                Salary</label>
+              <input type="text" class="form-control" formControlName="salary" id="exampleInptPassword1" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-success" (click)="updateEmployee()" data-bs-dismiss="modal"
+            [disabled]="!formValue.valid">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+<p-toast position="bottom-right"></p-toast>
