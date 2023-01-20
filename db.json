@@ -1,0 +1,177 @@
+{
+  "posts": [
+    {
+      "firstName": "Robert",
+      "lastName": "Downey",
+      "email": "stark@gov.in",
+      "mobile": "9923621478",
+      "password": "jarvis22",
+      "salary": "2,00,000",
+      "id": 1
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Rogers",
+      "email": "captainam@gmail.com",
+      "mobile": "7788994785",
+      "password": "steve2451",
+      "salary": "1,50,000",
+      "id": 2
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Parker",
+      "email": "spider@gmail.com",
+      "mobile": "9852100777",
+      "password": "spidy10",
+      "salary": "1,00,000",
+      "id": 3
+    },
+    {
+      "firstName": "Chloe",
+      "lastName": "Decker",
+      "email": "lucifer@gmail.com",
+      "mobile": "8920120354",
+      "password": "devil99",
+      "salary": "75,000",
+      "id": 4
+    },
+    {
+      "firstName": "Jason",
+      "lastName": "Brody",
+      "email": "jsonbrody@gmail.com",
+      "mobile": "7700220045",
+      "password": "jsonb54",
+      "salary": "50,000",
+      "id": 5
+    },
+    {
+      "firstName": "Thor ",
+      "lastName": "Odinson",
+      "email": "thor@gmail.com",
+      "mobile": "9000000000",
+      "password": "thor..",
+      "salary": "25,000",
+      "id": 6
+    },
+    {
+      "firstName": "Clint",
+      "lastName": " Barton",
+      "email": "hawkayee@gmail.com",
+      "mobile": "8746578945",
+      "password": "clint777",
+      "salary": "45,000",
+      "id": 8
+    },
+    {
+      "firstName": "Liza",
+      "lastName": "Decker",
+      "email": "lizadeck@gmail.com",
+      "mobile": "8899664444",
+      "password": "liza852",
+      "salary": "30,000",
+      "id": 9
+    },
+    {
+      "firstName": "Clara",
+      "lastName": "Wilson",
+      "email": "clarawil22@gmail.com",
+      "mobile": "2101455718",
+      "password": "clara123",
+      "salary": "45,000",
+      "id": 11
+    },
+    {
+      "firstName": "John",
+      "lastName": "Carter",
+      "email": "johncarter@gmail.gov",
+      "mobile": "1020304050",
+      "password": "john24",
+      "salary": "88,000",
+      "id": 12
+    }
+  ],
+  "comments": [
+    {
+      "title": "Long Event",
+      "start": "2023-01-22T17:14",
+      "end": "2023-01-24T17:14",
+      "id": 28
+    },
+    {
+      "title": "Team discussion",
+      "start": "2023-01-10T17:14",
+      "end": "2023-01-11T17:14",
+      "id": 29
+    },
+    {
+      "title": "Holiday",
+      "start": "2023-01-01T12:15",
+      "end": "",
+      "id": 35
+    },
+    {
+      "title": "Long Event",
+      "start": "2023-02-14T12:40",
+      "end": "2023-02-17T16:44",
+      "id": 37
+    },
+    {
+      "title": "Conference",
+      "start": "2023-02-06T11:20",
+      "end": "",
+      "id": 39
+    },
+    {
+      "title": "Meeting",
+      "start": "2023-01-29T17:34",
+      "end": "",
+      "id": 41
+    },
+    {
+      "title": "Sunday",
+      "start": "2023-01-15T00:00",
+      "end": "",
+      "id": 42
+    },
+    {
+      "title": "Event",
+      "start": "2023-03-07T12:00",
+      "end": "2023-03-12T16:01",
+      "id": 43
+    },
+    {
+      "title": "Conference",
+      "start": "2023-01-09T16:45",
+      "end": "",
+      "id": 45
+    },
+    {
+      "title": "Meeting",
+      "start": "2023-02-19T16:46",
+      "end": "2023-02-20T16:46",
+      "id": 46
+    },
+    {
+      "title": "Birthday",
+      "start": "2023-02-28T16:47",
+      "end": "",
+      "id": 47
+    },
+    {
+      "title": "Birthday Party",
+      "start": "2023-01-19T19:30",
+      "end": "",
+      "id": 48
+    },
+    {
+      "title": "Birthday",
+      "start": "2023-01-19",
+      "end": "2023-01-19T20:36",
+      "id": 49
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
