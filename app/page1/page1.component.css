@@ -1,0 +1,52 @@
+
+
+:host ::ng-deep .p-datatable {
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+}
+:host ::ng-deep .p-menubar {
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+}
+   
+/* :host ::ng-deep .p-inputtext{
+    text-align: center;
+
+} */
+.product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 0.3rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+  
+.product-image {
+    width: 50%;
+    height: 138px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 
+        0 3px 6px rgba(0, 0, 0, 0.23);
+}
+:host ::ng-deep  .p-carousel-items-content{
+    overflow: hidden;
+    width: 90.50%;
+    margin-left: 20px;
+}
+.iconspace{
+    margin-right: 8px;
+}
+:host ::ng-deep .p-menubar {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    background: hsl(200deg 12% 88%) !important;
+}
+
+:host ::ng-deep .p-calendar .p-datepicker {
+    min-width: 33% !important;
+    z-index: 1001 !important;
+    transform-origin: center bottom !important;
+    top: 51px !important;
+    left: 0px !important;
+    /* max-width: 99% !important; */
+}
